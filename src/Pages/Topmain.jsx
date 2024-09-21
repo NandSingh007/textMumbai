@@ -81,69 +81,73 @@ const SecondDiv = styled.div`
     max-width: 450px;
   }
 `;
+
 const SecondBillowSection = styled.div`
   padding: 20px;
-  background-color: #f9f9f9;
-
   text-align: left;
 
   h1 {
-    font-size: 2.5rem;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
   }
 `;
 
 const FirstSec = styled.div`
   display: flex;
-  align-items: flex-start;
-  width: 90%;
-
-  margin: 2% 5%;
+  align-items: center;
+  width: 95%;
   border: 1px solid black;
-  margin-bottom: 10px;
+  margin: 0% 2%;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center items */
+  }
 `;
 
 const ImgSec = styled.div`
+  margin-right: 15px;
+
   img {
-    width: 145px;
-    height: auto;
+    width: 120px; /* Set a fixed width for the image */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 0; /* Remove margin on small screens */
+    margin-bottom: 10px; /* Add space below the image */
   }
 `;
 
 const DetailSec = styled.div`
-  margin-left: 20px;
+  text-align: left;
+
   h2 {
-    font-size: 1.8rem;
-    margin: 0;
+    margin: 0 0 10px; /* Add margin for spacing */
   }
+
   p {
-    font-size: 1rem;
-    margin-top: 10px;
-    color: #666;
+    margin-bottom: 10px; /* Add margin for spacing */
   }
 
   button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    font-size: 1rem;
-    background-color: #007bff;
+    padding: 10px 15px; /* Add some padding to the button */
+    background-color: #007bff; /* Bootstrap primary color */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 
     &:hover {
-      background-color: #0056b3;
+      background-color: #0056b3; /* Darker blue on hover */
     }
   }
 `;
-
 // Styled components
 const BoxDetailsContainer = styled.div`
   padding: 40px;
